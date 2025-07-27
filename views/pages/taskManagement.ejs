@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+  <h2 class="mb-4"> Assigned Tasks</h2>
+   <table class="table table-bordered table-hover shadow-sm">
+    <thead class="table-light">
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Project</th>
+        <th>Deadline</th>
+        <th>Priority</th>
+        <th>Assigned Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% tasks.forEach(task => { %>
+        <tr>
+          <td><%= task.employeeId %></td>
+          <td><%= task.employeeName %></td>
+          <td><%= task.subject %></td>
+          <td><%= task.project %></td>
+          <td><%= task.deadline %></td>
+          <td><%= task.priority %></td>
+          <td><%= task.assignedAt %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('../partials/footer') %>
